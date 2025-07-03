@@ -16,7 +16,7 @@ and released checkpoints at this stage.
 
 ## Installation
 
-Please follow the AudioCraft installation instructions from the [README](../README.md).
+Please follow the AudioCraft installation instructions from the [README](../../README.md).
 
 
 ## Training
@@ -174,7 +174,7 @@ Learn more about AudioCraft training pipelines in the [dedicated section](./TRAI
 
 ## License
 
-See license information in the [README](../README.md).
+See license information in the [README](../../README.md).
 
 [arxiv]: https://arxiv.org/abs/2210.13438
 [encodec_samples]: https://ai.honu.io/papers/encodec/samples.html

@@ -18,7 +18,7 @@ See [the model card](../model_cards/JASCO_MODEL_CARD.md).
 
 ## Installation
 
-First, Please follow the AudioCraft installation instructions from the [README](../README.md).
+First, Please follow the AudioCraft installation instructions from the [README](../../README.md).
 
 Then, download and install chord_extractor from [source](http://www.isophonics.net/nnls-chroma)
 

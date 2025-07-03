@@ -8,7 +8,7 @@ AudioCraft training pipelines are designed to be research and experiment-friendl
 
 ## Environment setup
 
-For the base installation, follow the instructions from the [README.md](../README.md).
+For the base installation, follow the instructions from the [README.md](../../README.md).
 Below are some additional instructions for setting up the environment to train new models.
 
 ### Team and cluster configuration
