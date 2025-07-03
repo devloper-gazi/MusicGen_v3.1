@@ -25,9 +25,9 @@ for line in open('audiocraft/__init__.py'):
         VERSION = context['__version__']
 
 HERE = Path(__file__).parent
-
+README_PATH = HERE.parent / "README.md"
 try:
-    with open(HERE / "README.md", encoding='utf-8') as f:
+    with open(README_PATH, encoding='utf-8') as f:
         long_description = '\n' + f.read()
 except FileNotFoundError:
     long_description = DESCRIPTION

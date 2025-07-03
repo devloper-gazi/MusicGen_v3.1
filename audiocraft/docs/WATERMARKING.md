@@ -4,10 +4,10 @@ AudioCraft provides the training code and models for AudioSeal, a method for spe
 
 ## Installation and setup
 
-Make sure to install audiocraft version `1.4.0a1` or later, and with the `[wm]` extra (see [README](../README.md)).
+Make sure to install audiocraft version `1.4.0a1` or later, and with the `[wm]` extra (see [README](../../README.md)).
 Alternatively, you can just install audioseal yourself. To install AudioSeal, follow [Installation](https://github.com/facebookresearch/audioseal) guidelines in the AudioSeal repo.
 
-_NOTE_: Since we use AAC augmentation in our training loop, you need to install ffmpeg, or it will not work (See Section "Installation" in [README](../README.md)).
+_NOTE_: Since we use AAC augmentation in our training loop, you need to install ffmpeg, or it will not work (See Section "Installation" in [README](../../README.md)).
 
 Make sure you follow [steps for basic training setup](TRAINING.md) before starting.
 
