@@ -1,8 +1,58 @@
+# 🎼 MusicGen Composer v3.1
+
+> **Local PyQt desktop app** powered by Meta **MusicGen-medium** (AudioCraft).  
+> Generate high-quality 30-second clips or stitched 60-second tracks completely offline on a single consumer GPU.
+
+<div align="center">
+  <img src="docs/screenshot_dark.png" width="720"/>
+</div>
+
+---
+
+## ✨ Highlights
+
+| Feature | Details |
+|---------|---------|
+| **Offline**            | Works with a local `musicgen-medium` model – no API keys. |
+| **30 s / 60 s**        | One 30-second clip **or** automatic **2 × 30 s** stitching (≈ 60 s). |
+| **Dark PyQt GUI**      | Prompt box, gain slider, save-folder picker, live progress bar. |
+| **RTX-friendly**       | FP16 + ≤ 1024-token cap prevents OOM on 8 GB GPUs (RTX 4060 OK). |
+| **Dual output**        | Saves **WAV** *and* **MP3** with one click. |
+
+---
+
+## 🖥️ Quick Start
+
+```bash
+git clone https://github.com/yourname/musicgen-composer.git
+cd musicgen-composer
+```
+
+# (optional) virtual env
+```bash
+python -m venv .venv && source .venv/bin/activate      # Windows: .venv\Scripts\activate
+```
+# core deps  (CUDA 11.8 wheel shown)
+```bash
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+pip install transformers pyqt5 scipy pydub
+sudo apt install ffmpeg                                 # or: conda install "ffmpeg<5" -c conda-forge
+```
+# model (≈1.5 GB, needs git-lfs)
+```bash
+sudo apt install git-lfs && git lfs install
+git clone https://huggingface.co/facebook/musicgen-medium models/musicgen-medium
+```
+# launch GUI
+```bash
+python generate_music_gui.py
+```
+```bash
 # AudioCraft
 ![docs badge](https://github.com/facebookresearch/audiocraft/workflows/audiocraft_docs/badge.svg)
 ![linter badge](https://github.com/facebookresearch/audiocraft/workflows/audiocraft_linter/badge.svg)
 ![tests badge](https://github.com/facebookresearch/audiocraft/workflows/audiocraft_tests/badge.svg)
-
+```
 AudioCraft is a PyTorch library for deep learning research on audio generation. AudioCraft contains inference and training code
 for two state-of-the-art AI generative models producing high-quality audio: AudioGen and MusicGen.
 
