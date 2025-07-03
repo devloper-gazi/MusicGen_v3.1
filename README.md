@@ -30,24 +30,43 @@ sudo apt-get install ffmpeg
 conda install "ffmpeg<5" -c conda-forge
 ```
 
+## Virtual Environment
+
+It is recommended to work within a dedicated Python virtual environment to keep
+dependencies isolated. You can create one using `venv`:
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+Alternatively, you can use Conda:
+
+```bash
+conda create -n audiocraft python=3.9
+conda activate audiocraft
+```
+
+Once activated, follow the installation commands above.
+
 ## Models
 
 At the moment, AudioCraft contains the training code and inference code for:
-* [MusicGen](./docs/MUSICGEN.md): A state-of-the-art controllable text-to-music model.
-* [AudioGen](./docs/AUDIOGEN.md): A state-of-the-art text-to-sound model.
-* [EnCodec](./docs/ENCODEC.md): A state-of-the-art high fidelity neural audio codec.
-* [Multi Band Diffusion](./docs/MBD.md): An EnCodec compatible decoder using diffusion.
-* [MAGNeT](./docs/MAGNET.md): A state-of-the-art non-autoregressive model for text-to-music and text-to-sound.
-* [AudioSeal](./docs/WATERMARKING.md): A state-of-the-art audio watermarking.
-* [MusicGen Style](./docs/MUSICGEN_STYLE.md): A state-of-the-art text-and-style-to-music model.
-* [JASCO](./docs/JASCO.md): "High quality text-to-music model conditioned on chords, melodies and drum tracks"
+* [MusicGen](./audiocraft/docs/MUSICGEN.md): A state-of-the-art controllable text-to-music model.
+* [AudioGen](./audiocraft/docs/AUDIOGEN.md): A state-of-the-art text-to-sound model.
+* [EnCodec](./audiocraft/docs/ENCODEC.md): A state-of-the-art high fidelity neural audio codec.
+* [Multi Band Diffusion](./audiocraft/docs/MBD.md): An EnCodec compatible decoder using diffusion.
+* [MAGNeT](./audiocraft/docs/MAGNET.md): A state-of-the-art non-autoregressive model for text-to-music and text-to-sound.
+* [AudioSeal](./audiocraft/docs/WATERMARKING.md): A state-of-the-art audio watermarking.
+* [MusicGen Style](./audiocraft/docs/MUSICGEN_STYLE.md): A state-of-the-art text-and-style-to-music model.
+* [JASCO](./audiocraft/docs/JASCO.md): "High quality text-to-music model conditioned on chords, melodies and drum tracks"
 
 
 ## Training code
 
 AudioCraft contains PyTorch components for deep learning research in audio and training pipelines for the developed models.
 For a general introduction of AudioCraft design principles and instructions to develop your own training pipeline, refer to
-the [AudioCraft training documentation](./docs/TRAINING.md).
+the [AudioCraft training documentation](./audiocraft/docs/TRAINING.md).
 
 For reproducing existing work and using the developed training pipelines, refer to the instructions for each specific model
 that provides pointers to configuration, example grids and model/task-specific information and FAQ.
@@ -58,11 +77,37 @@ that provides pointers to configuration, example grids and model/task-specific i
 We provide some [API documentation](https://facebookresearch.github.io/audiocraft/api_docs/audiocraft/index.html) for AudioCraft.
 
 
+## Execution and GUI
+
+After installing the package you can generate music through command line scripts
+or graphical interfaces.
+
+### Gradio demos
+The `audiocraft/demos` folder contains several [Gradio](https://www.gradio.app/)
+applications. To launch the MusicGen demo locally run:
+
+```bash
+python -m audiocraft.demos.musicgen_app --share
+```
+
+Add `--share` to create a publicly shareable link. Similar commands can be used
+for `magnet_app.py` and `jasco_app.py`.
+
+### PyQt GUI
+If you prefer a desktop application, run the PyQt interface:
+
+```bash
+python audiocraft/generate_music.py
+```
+
+This opens a window where you can type prompts and generate short clips
+offline.
+
 ## FAQ
 
 #### Is the training code available?
 
-Yes! We provide the training code for [EnCodec](./docs/ENCODEC.md), [MusicGen](./docs/MUSICGEN.md),[Multi Band Diffusion](./docs/MBD.md) and [JASCO](./docs/JASCO.md).
+Yes! We provide the training code for [EnCodec](./audiocraft/docs/ENCODEC.md), [MusicGen](./audiocraft/docs/MUSICGEN.md),[Multi Band Diffusion](./audiocraft/docs/MBD.md) and [JASCO](./audiocraft/docs/JASCO.md).
 
 #### Where are the models stored?
 
@@ -72,8 +117,8 @@ Finally, if you use a model that relies on Demucs (e.g. `musicgen-melody`) and w
 
 
 ## License
-* The code in this repository is released under the MIT license as found in the [LICENSE file](LICENSE).
-* The models weights in this repository are released under the CC-BY-NC 4.0 license as found in the [LICENSE_weights file](LICENSE_weights).
+* The code in this repository is released under the MIT license as found in the [LICENSE file](./audiocraft/LICENSE).
+* The models weights in this repository are released under the CC-BY-NC 4.0 license as found in the [LICENSE_weights file](./audiocraft/LICENSE_weights).
 
 
 ## Citation
@@ -89,4 +134,4 @@ For the general framework of AudioCraft, please cite the following.
 ```
 
 When referring to a specific model, please cite as mentioned in the model specific README, e.g
-[./docs/MUSICGEN.md](./docs/MUSICGEN.md), [./docs/AUDIOGEN.md](./docs/AUDIOGEN.md), etc.
+[./audiocraft/docs/MUSICGEN.md](./audiocraft/docs/MUSICGEN.md), [./audiocraft/docs/AUDIOGEN.md](./audiocraft/docs/AUDIOGEN.md), etc.

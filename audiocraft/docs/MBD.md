@@ -12,7 +12,7 @@ MultiBand diffusion is a collection of 4 models that can decode tokens from
 
 ## Installation
 
-Please follow the AudioCraft installation instructions from the [README](../README.md).
+Please follow the AudioCraft installation instructions from the [README](../../README.md).
 
 
 ## Usage
@@ -110,7 +110,7 @@ Learn more about AudioCraft training pipelines in the [dedicated section](./TRAI
 
 ## License
 
-See license information in the [README](../README.md).
+See license information in the [README](../../README.md).
 
 
 [arxiv]: https://arxiv.org/abs/2308.02560

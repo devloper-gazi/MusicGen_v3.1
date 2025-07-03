@@ -19,7 +19,7 @@ See [the model card](../model_cards/MUSICGEN_STYLE_MODEL_CARD.md).
 
 ## Installation
 
-Please follow the AudioCraft installation instructions from the [README](../README.md).
+Please follow the AudioCraft installation instructions from the [README](../../README.md).
 
 MusicGen-Stem requires a GPU with at least 16 GB of memory for running inference with the medium-sized models (~1.5B parameters).
 
