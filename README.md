@@ -24,7 +24,7 @@
 ## 🖥️ Quick Start
 
 ```bash
-git clone [https://github.com/yourname/musicgen-composer.git](https://github.com/devloper-gazi/MusicGen_v3.1.git)
+git clone https://github.com/devloper-gazi/MusicGen_v3.1.git
 cd musicgen-composer
 ```
 
