@@ -4,7 +4,7 @@
 > Generate high-quality 30-second clips or stitched 60-second tracks completely offline on a single consumer GPU.
 
 <div align="center">
-  <img src="docs/screenshot_dark.png" width="720"/>
+  <img src="screenshot_dark.png" width="720"/>
 </div>
 
 ---
